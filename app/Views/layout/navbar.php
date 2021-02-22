@@ -36,6 +36,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<?= base_url("pengumuman") ?>">Pengumuman</a>
                         <a class="dropdown-item" href="<?= base_url("/#jadwal-shalat-lengkap") ?>">Jadwal Shalat</a>
+                        <!-- <a class="dropdown-item" href="<?= base_url("/hadits") ?>">Kumpulan Hadits</a> -->
                         <a class="dropdown-item" href="<?= base_url("/pages/profile") ?>">Profil & Kontak</a>
                         <a class="dropdown-item" href="<?= base_url("/pages/galeri") ?>">Galeri</a>
                     </div>

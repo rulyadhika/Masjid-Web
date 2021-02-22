@@ -208,6 +208,52 @@ function getElapsedTime($datetime)
                         </div>
                     </div>
                 </section>
+
+                <section class="content-section" id="hadits">
+                    <h3 class="font-weight-bold text-center section-title-center">Kumpulan Hadits</h3>
+                    <ul class="hadits-wrapper">
+                        <li>
+                            <img src="<?= base_url("asset/images/hadith/1.abu dawud.jpg"); ?>" alt="">
+                            <h5>HR. Abu Daud</h5>
+                            <h6>No. 1 - 4590</h6>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success btn-sm d-inline-block">Pelajari</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="<?= base_url("asset/images/hadith/2.muslim.jpg"); ?>" alt="">
+                            <h5>HR. Muslim</h5>
+                            <h6>No. 1 - 5362</h6>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success btn-sm d-inline-block">Pelajari</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="<?= base_url("asset/images/hadith/3.tirmidzi.jpg"); ?>" alt="">
+                            <h5>HR. Tirmidzi</h5>
+                            <h6>No. 1 - 3891</h6>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success btn-sm d-inline-block">Pelajari</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="<?= base_url("asset/images/hadith/4.bukhari.jpg"); ?>" alt="">
+                            <h5>HR. Bukhari</h5>
+                            <h6>No. 1 - 7008</h6>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success btn-sm d-inline-block">Pelajari</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="<?= base_url("asset/images/hadith/5.ahmad.jpg"); ?>" alt="">
+                            <h5>HR. Ahmad</h5>
+                            <h6>No. 1 - 26363</h6>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success btn-sm d-inline-block">Pelajari</a>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
             </div>
         </div>
     </div>

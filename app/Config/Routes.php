@@ -46,6 +46,7 @@ $routes->get('/pengajian/(:any)', 'Postingan::detail/$1');
 $routes->get('/kegiatan/', 'Postingan::kegiatan');
 $routes->get('/kegiatan/(:any)', 'Postingan::detail/$1');
 
+$routes->get('/hadits/', 'Pages::hadits');
 
 $routes->group('admin', ['filter' => 'role:dev,admin,superadmin'], function ($routes) {
 	$routes->get('dashboard', 'Admin\Dashboard::index');

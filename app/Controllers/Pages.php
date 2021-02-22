@@ -61,6 +61,15 @@ class Pages extends BaseController
 		];
 		return view('pages/gallery', $data);
 	}
+
+	public function hadits()
+	{
+		$data = [
+			'title' => "Kumpulan Hadits | Masjid As-Salam",
+		];
+		return view('pages/hadits', $data);
+	}
+
 	//--------------------------------------------------------------------
 
 }
