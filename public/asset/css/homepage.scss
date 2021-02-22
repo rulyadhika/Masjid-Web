@@ -1,0 +1,289 @@
+@mixin responsive-element {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.banner-carousel {
+  @include responsive-element();
+
+  .carousel-inner {
+    img {
+      filter: brightness(40%);
+      max-height: 500px;
+      object-fit: cover;
+    }
+  }
+}
+
+.main-container {
+  padding: 0;
+  padding-bottom: 50px;
+  .content-container {
+    .content-section {
+      padding: 0 50px;
+      margin-bottom: 50px;
+
+      // &:nth-child(even) {
+      //   background-color: #f6f6f7;
+      // }
+
+      .section-title-center {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+
+        &::before,
+        &::after {
+          content: "";
+          width: 25px;
+          height: 2px;
+          background: #20a558;
+          display: inline-block;
+          margin: 8px 8px;
+        }
+      }
+
+      .section-regular-title {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+
+    #jadwal-shalat-lengkap {
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("https://source.unsplash.com/1Z2niiBPg5A/1280x720") fixed center
+          center;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      color: white;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      hr {
+        background-color: white;
+        height: 1px;
+        border: 0;
+        opacity: 0.5;
+      }
+
+      ul {
+        display: grid;
+        list-style-type: none;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+
+        li {
+          text-align: center;
+          // background-color: rgba($color: #f2f2f2, $alpha: 0.6);
+          background-color: rgba($color: #ffffff, $alpha: 0.7);
+          padding: 10px;
+          border-radius: 10px;
+
+          span {
+            display: block;
+            color: black;
+
+            img {
+              width: 20px;
+            }
+
+            &:first-child {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    #layanan {
+      .layanan-wrapper {
+        margin-top: 30px;
+        display: grid;
+        list-style-type: none;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: 250px;
+        gap: 3px;
+
+        li {
+          position: relative;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: inline-block;
+            filter: brightness(40%);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+
+          span {
+            display: block;
+            position: absolute;
+            font-weight: bold;
+            bottom: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+            padding: 10px 20px;
+            z-index: 1;
+          }
+        }
+      }
+    }
+
+    #content-widget-section {
+      display: grid;
+      grid-template-areas: "postinganSection agendaSection";
+      grid-template-columns: 0.7fr 0.3fr;
+      gap: 30px;
+
+      .postingan-section {
+        grid-area: postinganSection;
+        .postingan-wrapper {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 10px;
+
+          .card {
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            height: 100%;
+
+            img {
+              height: 10rem;
+              object-fit: cover;
+              object-position: center;
+            }
+
+            &:hover {
+              .more-detail-btn {
+                color: #20a558 !important;
+              }
+            }
+
+            p {
+              font-size: 80%;
+              font-weight: 400;
+              bottom: 0;
+            }
+
+            .time-info {
+              font-size: 11px;
+            }
+
+            .more-detail-btn {
+              font-weight: bold;
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+
+      .agenda-section {
+        grid-area: agendaSection;
+
+        .agenda-wrapper {
+          border-left: 1px solid #dee2e6;
+          padding: 15px 0;
+          margin-left: 0;
+          margin-right: 0;
+          .kartu {
+            // border-bottom: 1px solid #dbdbdbcc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+              color: #20a558 !important;
+            }
+
+            &:last-child {
+              border: unset;
+              margin: unset;
+            }
+
+            img {
+              width: 60px;
+              height: 60px;
+              object-fit: cover;
+            }
+
+            .kartu-body {
+              padding: 0 15px;
+
+              small {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .main-container {
+    padding: 0;
+    padding-bottom: 50px;
+    .content-container {
+      .content-section {
+        width: 100%;
+        padding: 0 15px;
+      }
+
+      #content-widget-section {
+        grid-template-areas:
+          "postinganSection"
+          "agendaSection";
+        grid-template-columns: 1fr;
+
+        .agenda-section {
+          .agenda-wrapper {
+            border-left: unset;
+            padding: 0;
+
+            .kartu {
+              padding-left: 0;
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-carousel {
+    .carousel-inner {
+      img {
+        height: 100vh;
+        max-height: unset;
+      }
+    }
+  }
+}
+
+@media (min-width: 533px) {
+  #layanan {
+    .layanan-wrapper {
+      .wide-x-y {
+        grid-area: span 2 / span 2 / auto / auto;
+      }
+
+      .wide-x {
+        grid-column: span 2 / auto;
+      }
+    }
+  }
+}

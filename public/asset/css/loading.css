@@ -1,0 +1,73 @@
+.lazyload li {
+  background-color: unset !important;
+}
+
+.lazyload .skeleton-box {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  overflow: hidden;
+  background-color: #dddbdd;
+  margin: 10px 0;
+}
+
+.lazyload .skeleton-box::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255, 255, 255, 0)), color-stop(20%, rgba(255, 255, 255, 0.2)), color-stop(60%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0));
+  -webkit-animation: shimmer 1.8s infinite;
+          animation: shimmer 1.8s infinite;
+  content: "";
+}
+
+@-webkit-keyframes shimmer {
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+.lazyload .blog-post__headline {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.lazyload .blog-post__meta {
+  font-size: 0.85em;
+  color: #6b6b6b;
+}
+
+.lazyload .o-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lazyload .o-media__body {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 1em;
+}
+
+.lazyload .o-vertical-spacing > * + * {
+  margin-top: 0.75em;
+}
+
+.lazyload .o-vertical-spacing--l > * + * {
+  margin-top: 2em;
+}
+/*# sourceMappingURL=loading.css.map */
