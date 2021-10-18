@@ -125,3 +125,13 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 
+/pengingat.txt
+
+# ck editor 
+!/public/asset/plugins/ckeditor/*
+
+# ckfinder
+/public/asset/plugins/ckfinder
+
+# image assets
+/public/asset/images/hadith*
