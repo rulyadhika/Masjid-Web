@@ -34,7 +34,7 @@ class AppSeeder extends Seeder
 			[
 				'email' => 'radhika@gmail.com',
 				'username' => 'Ruly Adhika',
-				'password_hash' => '$2y$10$JUAKDXNZbZUrxhGbyJC4GuZiMgs.9raj5w4rokz4Z7ibCl2RN/smK',
+				'password_hash' => '$2y$10$UWHHLzb6TZgic9wQ3kHmtOyybXVE/i3x12OUIRYrZJNPdL8ENj91.',
 				'reset_hash'       => null,
 				'reset_at'         => null,
 				'reset_expires'    => null,
@@ -48,9 +48,9 @@ class AppSeeder extends Seeder
 				'deleted_at'       => null,
 			],
 			[
-				'email' => 'dev@gmail.com',
-				'username' => 'Developer 1',
-				'password_hash' => '$2y$10$EpYpqK8ZGXFvX5mPiqn4z.Tym4mjhSqLv.TPUOfW4m1pEk4LbBiZW',
+				'email' => 'admin@gmail.com',
+				'username' => 'Admin 1',
+				'password_hash' => '$2y$10$UWHHLzb6TZgic9wQ3kHmtOyybXVE/i3x12OUIRYrZJNPdL8ENj91.',
 				'reset_hash'       => null,
 				'reset_at'         => null,
 				'reset_expires'    => null,
@@ -73,7 +73,7 @@ class AppSeeder extends Seeder
 				'user_id' => 1
 			],
 			[
-				'group_id' => 1,
+				'group_id' => 3,
 				'user_id' => 2
 			]
 		];
@@ -163,6 +163,12 @@ class AppSeeder extends Seeder
 				'nama' => 'Keuangan',
 				'icon' => 'fa fa-receipt',
 				'url' => 'admin/keuangan'
+			],
+			[
+				'parent_id' => 7,
+				'nama' => 'User Management',
+				'icon' => 'fa fa-users',
+				'url' => 'admin/user-management'
 			],
 			[
 				'parent_id' => 7,

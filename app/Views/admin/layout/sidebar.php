@@ -41,12 +41,23 @@
                         <?php if (count($subMenus) > 0) : ?>
                             <ul class="nav nav-treeview">
                                 <?php foreach ($subMenus as $subMenu) : ?>
-                                    <li class="nav-item">
-                                        <a href="<?= base_url($subMenu['url']) ?>" class="nav-link <?= isset($sub_menu) ? ($sub_menu == $subMenu['nama'] ? 'active' : '') : ''; ?>">
-                                            <i class="<?= $subMenu['icon']; ?>"></i>
-                                            <p><?= $subMenu['nama']; ?></p>
-                                        </a>
-                                    </li>
+                                    <?php if ($subMenu['nama'] == 'User Management') : ?>
+                                        <?php if (in_groups(['superadmin', 'dev'])) : ?>
+                                            <li class="nav-item">
+                                                <a href="<?= base_url($subMenu['url']) ?>" class="nav-link <?= isset($sub_menu) ? ($sub_menu == $subMenu['nama'] ? 'active' : '') : ''; ?>">
+                                                    <i class="<?= $subMenu['icon']; ?>"></i>
+                                                    <p><?= $subMenu['nama']; ?></p>
+                                                </a>
+                                            </li>
+                                        <?php endif; ?>
+                                    <?php else : ?>
+                                        <li class="nav-item">
+                                            <a href="<?= base_url($subMenu['url']) ?>" class="nav-link <?= isset($sub_menu) ? ($sub_menu == $subMenu['nama'] ? 'active' : '') : ''; ?>">
+                                                <i class="<?= $subMenu['icon']; ?>"></i>
+                                                <p><?= $subMenu['nama']; ?></p>
+                                            </a>
+                                        </li>
+                                    <?php endif; ?>
                                 <?php endforeach; ?>
                             </ul>
                         <?php endif; ?>

@@ -77,6 +77,12 @@ $routes->group('admin', ['filter' => 'role:dev,admin,superadmin'], function ($ro
 	$routes->delete('banner/', 'Admin\Banner::deleteBanner');
 });
 
+$routes->group('admin', ['filter' => 'role:dev,superadmin'], function ($routes) {
+	$routes->get('user-management', 'Admin\User::index');
+	$routes->get('user-management/(:num)', 'Admin\User::show/$1');
+	$routes->put('user-management', 'Admin\User::update');
+});
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing
