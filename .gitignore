@@ -131,7 +131,10 @@ nb-configuration.xml
 !/public/asset/plugins/ckeditor/*
 
 # ckfinder
-/public/asset/plugins/ckfinder
+public/asset/plugins/ckfinder/
+
+# image light box
+!/public/asset/plugins/imagelightbox-1.1.0/*
 
 # image assets
 /public/asset/images/hadith*
