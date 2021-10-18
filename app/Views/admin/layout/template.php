@@ -12,6 +12,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <title><?= $title; ?></title>
 
+    <link rel="icon" href="<?= base_url('asset/images/logo-masjid.png'); ?>">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="/asset/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->

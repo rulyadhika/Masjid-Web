@@ -13,6 +13,8 @@
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
 
+    <link rel="icon" href="<?= base_url('asset/images/logo-masjid.png'); ?>">
+
     <!-- ui css -->
     <link rel="stylesheet" href="/asset/css/style.css">
     <link rel="stylesheet" href="/asset/plugins/ckeditor/src/content-styles.css" type="text/css">
