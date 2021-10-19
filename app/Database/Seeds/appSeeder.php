@@ -48,8 +48,8 @@ class AppSeeder extends Seeder
 				'deleted_at'       => null,
 			],
 			[
-				'email' => 'admin@gmail.com',
-				'username' => 'Admin 1',
+				'email' => 'superadmin@gmail.com',
+				'username' => 'superadmin',
 				'password_hash' => '$2y$10$UWHHLzb6TZgic9wQ3kHmtOyybXVE/i3x12OUIRYrZJNPdL8ENj91.',
 				'reset_hash'       => null,
 				'reset_at'         => null,
@@ -73,7 +73,7 @@ class AppSeeder extends Seeder
 				'user_id' => 1
 			],
 			[
-				'group_id' => 3,
+				'group_id' => 2,
 				'user_id' => 2
 			]
 		];
